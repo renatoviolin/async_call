@@ -3,9 +3,6 @@ import databases
 from app.models.weather import Weather
 import os
 
-try:
-
-
 DATABASE_URL = "sqlite:///./temp_db.db"
 database = databases.Database(DATABASE_URL)
 metadata = sqlalchemy.MetaData()
