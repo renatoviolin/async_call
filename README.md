@@ -7,7 +7,7 @@ Before you start this container, you need to get your own API_KEY from OpenWeath
 
 # Services available
 | Endpoint | Method | Description
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | /api/weather | POST | Retrieve the temperature and humidity given the city_id
 | /api/status  | GET  | Retrieve the status (# of requests processed)
 | /api/test    | GET  | Check if the server is online
@@ -109,8 +109,7 @@ docker exec -it container01 pytest test/test_main.py
 http://localhost/docs
 ```
 <img src=img/img1.jpg>
-<br>
-<br>
+
 After the request, the result must be.
 <img src=img/img2.jpg>
 
