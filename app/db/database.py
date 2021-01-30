@@ -4,20 +4,24 @@ from app.models.weather import Weather
 import os
 
 DATABASE_URL = "sqlite:///./temp_db.db"
-database = databases.Database(DATABASE_URL)
-metadata = sqlalchemy.MetaData()
-db_weather = sqlalchemy.Table(
-    "weather",
-    metadata,
-    sqlalchemy.Column("uid", sqlalchemy.String),
-    sqlalchemy.Column("city_id", sqlalchemy.String),
-    sqlalchemy.Column("temp", sqlalchemy.Float),
-    sqlalchemy.Column("humidity", sqlalchemy.Float),
-    sqlalchemy.Column("ts", sqlalchemy.String),
-)
 
-engine = sqlalchemy.create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
-metadata.create_all(engine)
+try:
+    database = databases.Database(DATABASE_URL)
+    metadata = sqlalchemy.MetaData()
+    engine = sqlalchemy.create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+
+    db_weather = sqlalchemy.Table(
+        "weather",
+        metadata,
+        sqlalchemy.Column("uid", sqlalchemy.String),
+        sqlalchemy.Column("city_id", sqlalchemy.String),
+        sqlalchemy.Column("temp", sqlalchemy.Float),
+        sqlalchemy.Column("humidity", sqlalchemy.Float),
+        sqlalchemy.Column("ts", sqlalchemy.String),
+    )
+    metadata.create_all(engine)
+except:
+    pass
 
 
 async def insert(weather: Weather):
