@@ -113,10 +113,10 @@ docker exec -it container01 pytest test/test_main.py
 ```
 http://localhost/docs
 ```
-<img src=img/img1.jpg>
+<img src=img/img_1.jpg>
 
 After the request, the result must be.
-<img src=img/img2.jpg>
+<img src=img/img_2.jpg>
 
 
 ## Advanced options
