@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+starlette
+aiohttp 
+sqlalchemy 
+databases 
+aiosqlite
+pytest-asyncio
+requests
