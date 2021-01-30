@@ -23,7 +23,6 @@ async def startup():
 @router.on_event("shutdown")
 async def shutdown():
     await database.disconnect()
-    os.remove('temp_db.db')
 
 
 def split_batch(data, split_size=BATCH_SIZE):

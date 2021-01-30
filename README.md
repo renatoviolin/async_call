@@ -90,7 +90,7 @@ Output:
 # Install instructions
 1. Clone this repository
 ```
-https://github.com/renatoviolin/async_call.git
+git clone https://github.com/renatoviolin/async_call.git
 cd async_call
 ```
 
