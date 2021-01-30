@@ -21,7 +21,7 @@ try:
     )
     metadata.create_all(engine)
 except:
-    pass
+    print('Database already created... skiping')
 
 
 async def insert(weather: Weather):
