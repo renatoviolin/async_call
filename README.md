@@ -25,7 +25,10 @@ This project uses the following packages/frameworks:
 Input
 
 ```
-{"city_id": [2172797, 3442585],"uid": "ren123"}
+{
+    "city_id": [2172797, 3442585],
+    "uid": "ren123"
+}
 ``` 
 
 Output: 
@@ -87,6 +90,8 @@ Output:
 # Install instructions
 1. Clone this repository
 ```
+https://github.com/renatoviolin/async_call.git
+cd async_call
 ```
 
 2. Install [docker](). If you already have, create the container with the command:
