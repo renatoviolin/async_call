@@ -1,6 +1,6 @@
 import aiohttp
 import asyncio
-import fastapi 
+import fastapi
 from app.db.database import select, insert, database, clean
 from app.models.weather import PayloadIn, Weather
 from datetime import datetime
